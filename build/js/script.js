@@ -1,0 +1,1 @@
+function pages(){$(".project-thumbnail").hover(function(){$(this).find(".project-thumbnail-overlay").slideToggle(),$(this).find(".project-catogory").slideToggle()})}$(document).ready(pages);

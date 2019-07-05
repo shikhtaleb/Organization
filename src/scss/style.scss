@@ -1,0 +1,601 @@
+@import '../css/old-style.css';
+
+// variables
+
+// colors
+$white: white;
+$sixE: #EEEEEE;
+$pink: #FF7766;
+$darkGray: #363636;
+$darkGray2: #424242;
+$lightblue: #759B9B;
+// transition
+$easeTransition: ease;
+$allTransition: all;
+$m-o-t-Seconds-Transition: .3s;
+$m-o-f-Seconds-Transition: .5s;
+
+// Measurement units
+$hundredPercent: 100%;
+$oneBexhill: 1px;
+$zero: 0;
+
+// Other
+$solid: solid;
+$bold: bold;
+$none: none;
+
+
+// mixins
+
+@mixin colors($pinkColor, $whiteColor) {
+    color: $pinkColor;
+    background-color: $whiteColor;
+}
+
+
+/*
+┌──────────────────────────────────────────┐
+│                 Styling                  │
+│                index.html                |
+└──────────────────────────────────────────┘
+*/
+
+/* St. Heading */
+.custom-navbar {
+    background-color: $white;
+    border: $none;
+    border-bottom: $oneBexhill $solid $sixE;
+    margin-bottom: $zero;
+    font-weight: $bold;
+
+    .navbar-brand {
+        padding: $zero;
+    }
+
+
+    .navbar-nav {
+
+        & .active a {
+            @include colors ($pink, $white);
+
+            &:hover {
+                @include colors ($pink, $white);
+            }
+        }
+        
+        & > li > a {
+            transition: $allTransition $m-o-t-Seconds-Transition $easeTransition;
+            margin: 20px;
+            font-size: 18px;
+            padding: $zero;
+        
+            &:hover {
+                color: $pink;
+                background-color: $white;
+            }
+        }
+
+    }
+}
+/* End. Heading */
+
+/* St. Carousel */
+#carousel-about {
+    height: 450px;
+
+    .item img {
+        height: 450px;
+        width: $hundredPercent;
+    }
+
+    .container-fluid {
+        padding: $zero;
+    }
+
+    .custom-carousel-indicators {
+        padding: $zero;
+
+        & li {
+            height: 15px;
+            width: 15px;
+            margin-left: 5px;
+
+            &.active {
+                height: 17px;
+                width: 17px;
+                border: 3px $solid $white;
+            }
+        }
+    }
+
+}
+
+.custom-btn {
+    padding: 10px 20px;
+    color: $pink;
+    font-size: 115%;
+    font-weight: $bold;
+    outline: $none;
+    margin-top: 10px;
+    border: $none;
+
+    &:hover, &:focus, &:active,
+    &:focus:active {
+        background-color: $pink;
+        color: $white;
+        box-shadow: $none;
+        outline: $none;
+        transition: $allTransition $m-o-t-Seconds-Transition $easeTransition;
+    }
+}
+
+.customy-btn {
+
+    &:hover, &:focus, &:active,
+    &:focus:active {
+        background-color: $pink;
+        color: $white;
+        box-shadow: $none;
+        outline: $none;
+        transition: $allTransition $m-o-t-Seconds-Transition $easeTransition;
+    }
+}
+
+
+/* End. Carousel */
+
+
+/* St. Projects */
+#latest-projects {
+    background-color: #FFFFCC;
+
+    .custom-btn {
+        padding: 6px 12px;
+    }
+    
+    .customs-paragraph {
+        margin-bottom: 14px;
+        font-size: 14px;
+    }
+
+}
+/* End. Projects */
+
+/* St. articles */
+.custom-btn-blog {
+    border: $oneBexhill $solid $pink;
+    font-size: 17px;
+    transition: $allTransition $m-o-t-Seconds-Transition $easeTransition;
+    margin-top: $zero;
+    padding: 5px 20px;
+
+    &:hover, &:focus, &:active,
+    &:hover:active, &:focus:active {
+        background-color: $pink;
+        border-color: $pink;
+        color: $white;
+    }
+}
+/* End. articles */
+
+
+/* St. Footer */
+#footer {
+    height: 400px;
+    background-color: $darkGray;
+    margin: $zero;
+
+    h2 {
+        color: $sixE;
+        font-size: 200%;
+        margin: 35px $zero $zero $zero;
+    }
+    
+    hr {
+        width: 60%;
+        border-top: $oneBexhill $solid $darkGray2;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    
+    .hr-small {
+        border-top: $oneBexhill $solid $darkGray2;
+        width: 15%;
+        margin-top: 16px;
+    }
+
+    .copyright {
+        color: #969696;
+    }
+
+    input {
+        width: 245px;
+        background-color: #202020;
+        border: $zero;
+        color: $sixE;
+
+        &:focus {
+            border-color: $sixE;
+            box-shadow: $zero $zero 2px $sixE;
+            transition: $allTransition $m-o-t-Seconds-Transition $easeTransition;
+        }
+    }
+
+    .custom-btn-footer {
+        width: 66px;
+        color: $darkGray;
+        background-color: $sixE;
+
+
+        &:hover, &:focus,
+        &:active, &:focus:active {
+            color: $sixE;
+            background-color: $darkGray;
+            outline: $none;
+            transition: $allTransition $m-o-t-Seconds-Transition $easeTransition;
+        }
+    }
+}
+
+#footer-nav-links {
+    margin-bottom: 30px;
+
+    a {
+        text-decoration: $none;
+        color: #BBBBBB;
+        margin-left: 40px;
+        font-size: 120%;
+        margin: $zero 1vw;
+
+        &:hover, &:focus {
+            color: $sixE;
+            transition: $allTransition $m-o-t-Seconds-Transition $easeTransition;
+        }
+    }
+    
+}
+/* End. Footer */
+
+
+/*
+┌──────────────────────────────────────────┐
+│                 Styling                  │
+│              projects.html               |
+└──────────────────────────────────────────┘
+*/
+
+.custom-btn-primary {
+    background-color: $white;
+    border: $oneBexhill $solid $pink;
+    color: $pink;
+    padding: 7px 20px;
+    font-weight: $bold;
+    font-size: 15px;
+
+
+    &:hover, &:focus,
+    &:active, &:active:focus {
+        background-color: $pink;
+        color: $white;
+        border: $oneBexhill $solid $pink;
+        transition: $allTransition $m-o-f-Seconds-Transition $easeTransition;
+    }
+}
+
+.custom-btn-category {
+    position: absolute;
+    top: 35px;
+    left: 40px;
+    font-weight: $bold;
+    width: auto;
+    border: $none;
+    border-radius: $zero;
+    background-color: $white;
+    color: $darkGray;
+
+
+    &:hover, &:focus, &:active,
+    &:hover:focus, &:focus:active {
+        background-color: $pink;
+        color: $white;
+        transition: $allTransition $m-o-f-Seconds-Transition $easeTransition;
+    }
+}
+
+/*
+┌──────────────────────────────────────────┐
+│                 Styling                  │
+│                blog.html                 |
+└──────────────────────────────────────────┘
+*/
+
+.custom-media-btn {
+    background-color: $pink;
+    color: $white;
+    border: $none;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: $allTransition $m-o-t-Seconds-Transition ease-out;
+
+    &:hover, &:focus, &:active,
+    &:hover:focus:active {
+        background-color: $white;
+        color: $pink;
+        border: $oneBexhill $solid $pink;
+        font-weight: $bold;
+    }
+}
+
+.boxes {
+    width: $hundredPercent;
+    padding: 15px;
+    padding-top: $zero;
+
+    h4 {
+        font-size: 20px;
+        font-weight: normal;
+        color: $pink;
+    }
+
+    a {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 9px;
+        color: #a9a9a9;
+    
+        &:hover, &:focus, &:active,
+        &:hover:active:focus {
+            text-decoration: $none;
+            color: #202020;
+            transition: $allTransition $m-o-t-Seconds-Transition $easeTransition;
+        }
+    }
+}
+
+.btn-search {
+    color: $sixE;
+    background-color: $lightblue;
+    width: 150%;
+    border-color: $lightblue;
+
+
+    &:hover, &:focus, &:active,
+    &:hover:focus:active {
+    color: #FFFFCC;
+    background-color: $lightblue;
+    border: $oneBexhill $solid $lightblue;
+    outline: $none;
+    }
+}
+
+
+.search-box {
+    margin: 20px 0;
+    width: 80%;
+    padding: 15px;
+
+    & input:focus,
+    & input:active,
+    & input:focus:active {
+        box-shadow: 0 0 1px #759B9B;
+        transition: all .3s ease;
+    }
+}
+
+
+
+/*
+┌──────────────────────────────────────────┐
+│                 Styling                  │
+│                write.html                |
+└──────────────────────────────────────────┘
+*/
+
+
+.right-section {
+    margin: 45px $zero;
+    background-color: #F1F1F1;
+    border-radius: 10px;
+
+    h4 {
+        margin-bottom: 15px;
+        margin-top: $zero;
+        padding-top: 15px;
+        padding-left: 20px;
+    }
+
+    ul li {
+
+        &:last-child{
+            padding-bottom: 15px;
+            margin-bottom: $zero;
+            font-size: 15px;
+        }
+
+        &:not(:last-child) {
+            font-size: 20px;
+            margin-bottom: 5px;
+            font-size: 15px;
+            margin-bottom: 5px;
+            padding-bottom: 5px;
+        }
+    }
+}
+
+/*
+┌──────────────────────────────────────────┐
+│                 Styling                  │
+│               contact.html               |
+└──────────────────────────────────────────┘
+*/
+
+.custom-form-control {
+    color: #868686;
+    border: $oneBexhill $solid $sixE;
+    box-shadow: $none;
+    border-radius: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    &:focus {
+        border-color: $pink;
+        box-shadow: $none;
+    }
+}
+
+#contact-info {
+    margin-top: 28px;
+    font-weight: 800;
+    line-height: 2.5em;
+
+    i {
+        color: $pink;
+        margin: 5px;
+        text-align: center;
+    }
+}
+
+
+/*
+┌──────────────────────────────────────────┐
+│                Media Query               │
+│                 All pages                │
+└──────────────────────────────────────────┘
+*/
+
+
+@media (max-width: 767.98px) {
+    
+    /* St. index.html */
+    #footer input {
+        width: $hundredPercent;
+    }
+    /* End. index.html */
+
+    /* St. projects.html */
+    .custom-project-thumbnail > img {
+        width: $hundredPercent;
+    }
+    /* End. projects.html */
+
+    /* St. blog.html */
+    .custom-media-object {
+        display: none;
+    }
+
+    .search-box {
+        margin: 15px $zero;
+        width: 90%;
+
+        .boxes {
+            width: 90%;
+        }
+    }
+    /* End. blog.html */
+}
+
+@media (max-width: 991px) {
+
+    /* St. index.html */
+     
+    /* Heading */
+    .navbar-brand > img {
+        height: 56px;
+    }
+
+    /* Carousel */
+
+    .overlay {
+
+        .title1 {
+            text-align: center;
+        }
+    
+        .title2 {
+            width: 90%;
+            margin-top: 10px;
+            margin-bottom: $zero;
+        }
+    
+        .custom-btn {
+            display: none;
+        }
+
+    }
+
+    /* About */
+    
+    .custom-paragraph {
+        margin: $zero;
+    }
+
+    .custom-max-t-p {
+        width: $hundredPercent;
+    }
+
+    /* Projects */
+
+    .project-thumbnail {
+        width: $hundredPercent;
+        margin-bottom: 20vh;
+    }
+
+    /* Clients */
+    .clients-logo {
+        flex-flow: column;
+    }
+
+    /* End index.html */
+
+    /* St. about.html */
+    .team {
+        width: 90%;
+        padding: 30px 15px;
+    }
+    /* End. about.html */
+
+    /* St. article.html */
+    .blog-img > img {
+        width: $hundredPercent;
+    }
+    .search-box {
+        width: 90%;
+    }
+    /* End. article.html */
+
+    /* St. write.html */
+    .border-right {
+        border-right: none;
+    }
+    /* End. write.html */
+    /* St. contact.html */
+    .custom-max {
+        width: $hundredPercent;
+    }
+    /* End. contact.html*/
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* St. article.html */
+    .blog-img > img {
+        width: $hundredPercent;
+    }
+    /* End. article.html */
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    /* St. projects.html */
+    .custom-project-thumbnail > img {
+        width: $hundredPercent;
+    }
+    /* End. projects.html */
+}
+
+/*
+┌──────────────────────────────────────────┐
+│         Coding by M. Shikh Taleb         │
+│            www.shikhtaleb.net            │
+└──────────────────────────────────────────┘
+*/
